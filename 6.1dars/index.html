@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>6.1dars</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        button{
+            width: 100%;
+            max-width: 300px;
+        }
+         input{
+            width: 100%;
+            max-width: 300px;
+        }
+    </style>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function Header() {
+        return (
+          <div>
+            <h2>devfinder</h2>
+            <div>
+              dark{" "}
+              <img
+                src="./img/moon.svg"
+                alt="the black moon"
+                width="20"
+                height="20"
+              />
+            </div>
+          </div>
+        );
+      }
+      function Section1() {
+        return (
+          <div>
+            <img src="./img/find.svg" alt="finder" width="24" height="24" />
+            <input type="text" placeholder="Search GitHub username..." />
+            <button>Search</button>
+          </div>
+        );
+      }
+      function Section2() {
+        return (
+          <div>
+            <div>
+              <img
+                src="./img/cat.svg"
+                alt="the cat img"
+                width="117"
+                height="117"
+              />
+              <div>
+                <h2>The Octocat</h2> <h4>@octocat</h4>
+                <p>This profile has no bio</p>
+              </div>
+              <p>Joined 25 Jan 2011</p>
+            </div>
+            <div>
+              <div><ul>
+                <li><p>Repos</p>
+                    <h4>8</h4></li>
+                    <li><p>Followers</p>
+                    <h4>3938</h4></li>
+                    <li><p>Following</p>
+                    <h4>9</h4></li>
+                </ul></div> <div>
+                    <div>
+                        <div>
+                            <img src="./img/location.svg" alt="location" width='13' height='20'/>
+                            <p>San Francisco</p>
+                            </div>
+                            <div>
+                            <img src="./img/url.svg" alt="url" width='19' height='19'/>
+                            <p>https://github.blog</p>
+                            </div>
+                        </div>
+                    <div>
+                        <div>
+                            <img src="./img/twitter.svg" alt="twitter" width='20' height='16'/>
+                            <p>No Available</p>
+                            </div>
+                            <div>
+                            <img src="./img/building.svg" alt="building" width='20' height='19'/>
+                            <p>@github</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+          </div>
+        );
+      }
+      function App() {
+        return (
+          <div>
+            <Header />
+            <Section1 />
+            <Section2/>
+          </div>
+        );
+      }
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      root.render(App());
+    </script>
+  </body>
+</html>
